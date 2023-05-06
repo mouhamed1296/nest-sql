@@ -6,11 +6,17 @@ export class User {
   id: number;
 
   @Column()
-  firstName: string;
+  nom: string;
 
   @Column()
-  lastName: string;
+  prenom: string;
 
-  @Column({ default: true })
-  isActive: boolean;
+  @Column()
+  email: string;
+
+  @Column({ nullable: true, default: null })
+  matricule?: string;
+
+  @Column()
+  password: string;
 }
